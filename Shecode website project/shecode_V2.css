@@ -1,0 +1,337 @@
+@font-face {
+    font-family: 'sabon';
+    src: url('font/sabon_bold-webfont.woff'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'day_n_nite';
+    src: url('font/day_n_nite_free_trial-webfont.woff'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "sabon";
+    text-decoration: none;
+    /* outline: none;
+    border: none;
+    text-decoration: none; */
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+
+}
+
+/* Start of navigation bar */
+.navbar{
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 192, 211, 0.3);
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky{
+    padding: 15px 0;
+    background-color: #FFC0D3;
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    color: black;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'day_n_nite';
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+
+}
+.navbar .menu li a{
+    color: black;
+    font-size: 18px;
+    font-weight: 300px;
+    margin-left: 20px;
+    font-family: 'sabon';
+    transition: color 0.3s ease;
+
+}
+
+.navbar .menu li a:hover{
+    color: #E60965
+
+}
+
+/* .navbar.sticky li a:hover{
+
+} */
+
+/* end of navbar */
+
+/* start of menu-btn */
+
+.menu-btn{
+    color: #E60965;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Start of home section */
+
+.home{
+    display: flex;
+    background: url("images/1st.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    min-height: 500px;
+}
+
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+
+.home .homeContent .text{
+    font-size: 30px;
+}
+
+.home .homeContent .name{
+    font-size: 75px;
+    font-weight: 500;
+    margin-left: -3px;
+    font-family: 'day_n_nite';
+    margin-top: 20px;
+}
+.home .homeContent .title{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .homeContent .title span{
+    color: blue;
+    font-weight: 500;
+}
+.home .homeContent a{
+    display: inline-block;
+    background-color: #E60965;
+    color: white;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #E60965;
+    transition: all 0.3s ease;
+}
+.home .homeContent a:hover{
+    color: #E60965;
+    background: none;
+    /* border: none; */
+}
+/* end of home section */
+
+/* start of about section */
+
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+p {
+	color: black;
+	font-size: 1.4rem;
+	margin-top: 5px;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0.05rem;
+}
+
+#about .about {
+	/* flex-direction: column-reverse;
+	text-align: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 20px; */
+    flex-direction: row;
+}
+#about .col-left {
+	width: 600px;
+	height: 400px;
+	padding-left: 60px;
+}
+
+#about .col-right {
+	text-align: left;
+	padding: 30px;
+}
+#about .col-right h2 {
+	font-size: 1.8rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	margin-bottom: 10px;
+}
+#about .col-right p {
+	margin-bottom: 20px;
+}
+#about .col-right .cta {
+	color: black;
+	margin-bottom: 50px;
+	padding: 10px 20px;
+	font-size: 2rem;
+}
+#about .col-left .about-img {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	border: 10px solid white;
+}
+#about .col-left .about-img::after {
+	content: '';
+	position: absolute;
+	left: -33px;
+	top: 19px;
+	height: 98%;
+	width: 98%;
+	border: 7px solid crimson;
+	z-index: -1;
+
+}
+
+#about .about .col-left .about-img::after {
+    left: -45px;
+    top: 34px;
+    height: 98%;
+    width: 98%;
+    border: 10px solid crimson;
+}
+
+#about .col-right h1 {
+    text-align: left;
+}
+/* End About Section */
+
+/* response media start */
+
+@media (max-width: 1104px){
+    .home .max-width{
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 991px){
+    .max-width{
+        margin-left: 0 50px;
+    }
+
+}
+
+@media(max-width: 947px){
+
+    .max-width{
+        padding: 0 50px;
+        margin: auto;
+
+    }
+
+    .menu-btn{
+        z-index: 999;
+        display: block;
+    }
+
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+
+    .navbar .menu{
+        position: fixed;
+        background-color: #FFC0D3;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+
+    }
+
+    .home .homeContent .name{
+        font-size: 60px ;
+    }
+
+    .home .homeContent .title{
+        font-size: 30px;
+    }
+    .home .homeContent a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+}
+
+@media (max-width: 690px){
+    .max-width{
+        padding: 0 25px;
+    }
+    .home .homeContent .name{
+        font-size: 50px ;
+    }
+
+    .home .homeContent .title{
+        font-size: 32px;
+        
+    }
+
+    .home .homeContent a{
+        font-size: 20px;
+        /* padding: 8px 20px; */
+    }
+
+}
+
+@media (max-width: 500px){
+
+    .home .homeContent .name{
+        font-size: 50px ;
+    }
+
+    .home .homeContent .title{
+        font-size: 27px;
+        
+    }
+
+}
