@@ -27,6 +27,12 @@ section{
     scroll-snap-align: start;
 }
 
+img{
+    height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
 /* button */
 .btn{
     font-size: 18px;
@@ -87,8 +93,6 @@ nav {
     margin-left: -40px;
     text-align: center;
     
-    
-    
 }
 .logo img {
     height: 50px;
@@ -96,8 +100,6 @@ nav {
     border-radius: 40%;
     position: relative;
     top: 14px;
-    
-    
     
 }
 
