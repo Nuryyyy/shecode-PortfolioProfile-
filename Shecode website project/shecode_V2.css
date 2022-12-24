@@ -41,12 +41,14 @@ html {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+    
 }
 
 img {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
+    
 }
 
 p {
@@ -99,6 +101,7 @@ p {
     background-color: rgba(255, 192, 211, 0.3);
     padding: 15px 0;
     transition: all 0.3s ease;
+    z-index: 1;
 }
 
 .navbar.sticky{
@@ -266,11 +269,138 @@ p {
 #about .col-right h1 {
     text-align: center;
 }
+
 /* End About Section */
+
+/* Start of Portfolio Section */
+
+
+
+
+
+/* End portfolios section */
+
+
+#portfolios .portfolios {
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 50px 0;
+    /* max-width: 1200px; */
+    background-color: #FDF6F0;
+}
+
+#portfolios .portfolios-header h1 {
+	margin-bottom: 25px;
+    font-size: 3.5rem;
+	font-weight: 500;
+    
+}
+
+#portfolios .portfolio-item {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    border-radius: 10px;
+    margin: 20px auto;
+    overflow: hidden;
+    max-width: 1200px;
+	
+}
+
+#portfolios .portfolioList{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#portfolios .portfolio-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+#portfolios .portfolio-item {
+    height: 400px;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+}
+#portfolios .portfolioList .portfolio-info {
+    height: 100%;
+}
+#portfolios .portfolio-info {
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FFC0D3;
+    color: black;
+}
+
+#portfolios .portfolio-info h1 {
+	font-size: 3rem;
+	font-weight: 400;
+    padding: 10px 10px;
+    font-family: 'day_n_nite';
+    color: #E60965;
+}
+#portfolios .portfolio-info h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+#portfolios .portfolio-info p {
+	color: #28231D;
+    font-size: 20px;
+    /* letter-spacing: 1px;
+    line-height: 20px;
+    padding: 10px 15px; */
+    text-align: justify;
+    position: relative;
+}
+#portfolios .portfolio-info p span{
+	font-style: italic;
+}
+
+#portfolios .portfolioList .portfolio-img {
+    height: 100%;
+}
+
+#portfolios .portfolio-img {
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+#portfolios .portfolio-img:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #524A4E 40%, #FF8DC7 100%);
+    opacity: 0.7;
+}
+#portfolios .portfolio-img img {
+    transition: 0.3s ease transform;
+}
+#portfolios .portfolio-item:hover .portfolio-img img {
+    transform: scale(1.1);
+}
+
+#portfolios .portfolio-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+
 
 /* response media start */
 
-@media (max-width: 1104px){
+@media (max-width: 1200px){
     .home .max-width{
         margin-left: 0;
     }
@@ -371,7 +501,7 @@ p {
 
     /*  */
     #about .col-right .section-title{
-        font-size: 32px;
+        font-size: 40px;
         font-weight: 500;
         letter-spacing: 0.2rem;
         margin-bottom: 10px;
@@ -382,10 +512,10 @@ p {
         font-size: 1rem;
     }
 
-    /* #about .col-right h2{
+    #about .col-right h2{
         margin-bottom: 20px;
-        font-size: 32px;
-    } */
+        font-size: 30px;
+    }
     #about .col-right .cta {
         color: white;
         margin-bottom: 40px;
@@ -398,7 +528,77 @@ p {
         left: -40px;
     }
 
+    /* portfolio */
+
+
+    #portfolios .portfolio-item {
+        flex-direction: column;
+        
+	}
+
+    #portfolios .portfolio-item {
+        height: 100%;
+        /* margin: 0; */
+        width: 100%;
+        /* border-radius: 15%; */
+        padding: 25px;
+    }
+
+    /* #portfolios .portfolios {
+        max-width: 100%;
+    } */
+    
+
+    #portfolios .portfolios-header h1{
+        margin-bottom: 50px;
+        font-size: 40px;
+        font-weight: 500;
+        letter-spacing: 0.2rem;
+    }
+
+    #portfolios .portfolioList{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #portfolios .portfolio-info h1 {
+        font-weight: 400;
+        padding: 10px 10px;
+        font-family: 'day_n_nite';
+        color: #E60965;
+        font-size: 32px;
+        /* font-weight: 500; */
+        letter-spacing: 0.2rem;
+        margin-bottom: 10px;
+    }
+    #portfolios .portfolio-info h2 {
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+    #portfolios .portfolio-info p {
+        font-size: 1rem;
+    }
+
+    #portfolios .portfolio-item:nth-child(even) {
+        flex-direction: column;
+    }
+
+    #portfolios .portfolio-img img{
+        max-width: 100%;
+        height: 100%;
+    }
+
+
+
+    
 }
+
+
+
 
 @media (max-width: 500px){
 
