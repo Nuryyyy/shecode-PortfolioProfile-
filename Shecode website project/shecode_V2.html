@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="shecode_V2.css">
     <script src="https://kit.fontawesome.com/ba1402ebbd.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 </head>
 <body>
+    <div class="scroll-up-btn">
+        <i class="fa-solid fa-angle-up"></i>
+    </div>
     <nav class="navbar">
         <div class="max-width">
             <div class="logo"><a href="#">Shecode</a></div>
@@ -65,7 +69,7 @@
             <div class="homeContent">
                 <div class="text">Hello, my name is</div>
                 <div class="name">Nurymar Abdulla</div>
-                <div class="title">And I'm a <span>Software Developer</span></div>
+                <div class="title">And I'm a <span class="typing"></span></div>
                 <a href="#" class="cta">Resume</a>
             </div>
         </div>
@@ -82,7 +86,7 @@
               </div>
             </div>
             <div class="column col-right">
-              <div class="text">I'm Nury, <span>Fullstack Software  Developer</span></div>
+              <div class="text">I'm Nury, <span class="typing-2"></span></div>
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, velit alias eius non illum beatae atque
                 repellat ratione qui veritatis repudiandae adipisci maiores. At inventore necessitatibus deserunt
                 exercitationem cumque earum omnis ipsum rem accusantium quis, quas quia, accusamus provident suscipit magni!
@@ -98,16 +102,18 @@
     
     <section id="portfolios">
         <div class=" portfolios max-width">
-            <!-- <div class="portfolios-header"> -->
                 <h2 class="title">Portfolio</h2>
-            <!-- </div> -->
             <div class="portfolioList">
                 <div class="portfolio-item">
                     <div class="portfolio-info">
+                        <a href="https://github.com/Nuryyyy/Midnightwrite-blogpost">
                         <h1>Midnightwrite</h1>
+                        </a>
                         <p>An easy-to-use blog wherein the user can upload an image to accompany their article. As well as being able to see and change their own profiles, users may also communicate with others by sending them messages.
                             <br>
                             <span>Using PERN (Postgress, Express.js, React.js, Node.js) </span>
+                            <br>
+                        <a href="https://github.com/Nuryyyy/Midnightwrite-blogpost">View here.</a>
                         </p>
                     </div>
                     <div class="portfolio-img">
@@ -116,8 +122,12 @@
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-info">
+                        <a href="https://github.com/Nuryyyy/PythonProject/tree/main/Games%20Project/Hangman">
                         <h1>Hangman with Python</h1>
+                        </a>
                         <p>Players attempt to guess a random word within a set number of opportunities. With the following specs: the maximum number of tries a user is allowed and a time limit of 30 seconds in which they must guess a word.
+                            <br>
+                            <a href="https://github.com/Nuryyyy/PythonProject/tree/main/Games%20Project/Hangman">View here.</a>
                         </p>
                     </div>
                 <div class="portfolio-img">
@@ -126,8 +136,13 @@
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-info">
+                        <a href="https://github.com/Nuryyyy/PythonProject/tree/main/Games%20Project/Textbased">
                         <h1>Text Based Game with Python</h1>
-                        <p>An entirely text-based input-output simple game using Python. Taking the form of input, the player's decisions shape how the game's protagonist responds to the events unfolding before them.</p>
+                        </a>
+                        <p>An entirely text-based input-output simple game using Python. Taking the form of input, the player's decisions shape how the game's protagonist responds to the events unfolding before them.
+                            <br>
+                            <a href="https://github.com/Nuryyyy/PythonProject/tree/main/Games%20Project/Textbased">View here.</a>
+                        </p>
                     </div>
                 <div class="portfolio-img">
                     <img src="https://as1.ftcdn.net/v2/jpg/04/21/04/00/1000_F_421040029_lWiVrugJSwggCEJAT3Vem3WVMO8aQCn1.jpg" alt="controller">
@@ -135,8 +150,13 @@
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-info">
+                        <a href="https://github.com/Nuryyyy/PythonProject/blob/main/Games%20Project/Quiz%20Game/Quiz_Game_Final.py">
                         <h1>Quiz Game by Python</h1>
-                        <p>A Python trivia game about software engineering. Two parts make up the test: a true or false question and a numerical selection. After the test, your score is determined.</p>
+                        </a>
+                        <p>A Python trivia game about software engineering. Two parts make up the test: a true or false question and a numerical selection. After the test, your score is determined.
+                            <br>
+                            <a href="https://github.com/Nuryyyy/PythonProject/blob/main/Games%20Project/Quiz%20Game/Quiz_Game_Final.py">View here.</a>
+                        </p>
                     </div>
                     <div class="portfolio-img">
                         <img src="https://appgrooves.com/cdn/mc/GAME_TRIVIA/4_w1200.jpg" alt="quizgame">
@@ -159,11 +179,82 @@
     <!-- contact section -->
     <section id="contact">
         <div class="max-width">
-            <h2 class="title">Contact me</h2>
+            <h2 class="title">Contact me</h2>          
+            <div class="contact-content">
+                <div class="column left">
+                    <div class="text">Get in Touch</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et cumque saepe cupiditate suscipit nam, inventore vitae unde, totam possimus, perspiciatis quia provident animi dolorum necessitatibus optio voluptatibus exercitationem accusamus eveniet!</p>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head">Name:</div>
+                                <div class="sub-title">Nurymar Abdulla</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fa-sharp fa-solid fa-location-dot"></i>
+                            <div class="info">
+                                <div class="head">Address:</div>
+                                <div class="sub-title">Zamboanga City, Philippines</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fa-sharp fa-solid fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email:</div>
+                                <div class="sub-title">abdullanurymar@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fa-brands fa-github"></i>
+                            <div class="info">
+                                <div class="head">Github:</div>
+                                <div class="sub-title"><a href="https://github.com/Nuryyyy">https://github.com/Nuryyyy</a></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <div class="info">
+                                <div class="head">Linkedin:</div>
+                                <div class="sub-title"><a href="https://www.linkedin.com/in/nurymar-abdulla-8802b1234/">https://www.linkedin.com/in/nurymar-abdulla-8802b1234/</a></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="column right">
+                    <div class="text">Message me</div>
+                    <form action="#" id="">
+                        <div class="fields">
+                            <div class="field name">
+                                <input type="text" placeholder="Name" required>
+                            </div>
+                            <div class="field email">
+                                <input type="email" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="field ">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="field textarea">
+                            <textarea cols="30" rows="10" placeholder="Write your message..." required></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit">Send message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia molestiae amet soluta reiciendis ea? Nam similique neque expedita molestiae. Porro iure explicabo eaque possimus vel odit quidem perspiciatis exercitationem maxime ex inventore eum atque, deleniti minus! Nisi, architecto! Dignissimos soluta magnam sunt sapiente cumque labore consequatur architecto aliquid non, perspiciatis illo dolorem! Placeat ipsa itaque dolorum velit aliquid amet odit temporibus excepturi eveniet error porro, quia tenetur harum inventore fugit similique obcaecati minima corporis adipisci dignissimos? Perspiciatis at sint error temporibus sunt iste ut! Debitis, error? Minus ipsa quos, sapiente veritatis aliquam animi perferendis a error, temporibus voluptates obcaecati est dolore voluptas, ex vel laboriosam adipisci pariatur corporis. Velit repellendus perspiciatis eaque! Ullam, quam officiis iusto eius magnam corrupti quisquam nesciunt vitae labore suscipit a placeat in reprehenderit doloremque ab fugiat soluta quidem ducimus aliquid unde repudiandae velit dicta quasi? Earum hic rerum aliquam culpa, beatae ratione labore possimus ab maiores distinctio similique quis blanditiis iure consectetur ipsam quisquam tenetur, unde repudiandae voluptatem sunt vel accusamus aliquid. Delectus nesciunt reprehenderit eum odit, nihil inventore accusamus doloribus, necessitatibus quis, totam voluptate? Magnam facere optio ipsa, ipsum non vitae qui illo modi quis. Officiis rerum minus libero. In quis voluptate deserunt!</p> -->
+    <!-- footer section -->
+    <footer>
+        <span>Created by <a href="#">SheCode</a> | <span><i class="fa-solid fa-copyright"></i>2022 All rights reserved.</span></span>
+    </footer>
+
+   
     <script src="./shecode_V2.js"></script>
 </body>
 </html>

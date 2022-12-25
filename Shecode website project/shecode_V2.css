@@ -53,9 +53,9 @@ img {
 
 p {
 	color: black;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	margin-top: 5px;
-	line-height: 2.5rem;
+	line-height: 2rem;
 	font-weight: 200;
 	letter-spacing: 0.05rem;
 }
@@ -90,12 +90,42 @@ section{
 	letter-spacing: 0.1rem;
 	margin-top: 20px;
 	transition: all 0.3s ease;
+   
 
 }
 
 .cta:hover {
 	color: #E60965;
 	background-color: transparent;
+}
+
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #FFC0D3;
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+    line-height: 45px;
+    z-index: 1;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show{
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+}
+
+.typing{
+    color: #E60965;
 }
 
 /* Start of navigation bar */
@@ -165,6 +195,8 @@ section{
     background: url("images/1st.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+
     height: 100vh;
     min-height: 500px;
 }
@@ -198,8 +230,6 @@ section{
 /* end of home section */
 
 /* start of about section */
-
-
 
 
 #about  {
@@ -244,7 +274,7 @@ section{
     color: #E60965;
 }
 
-#about .about-content{
+#about .about-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -266,7 +296,6 @@ section{
 #about .about-content .col-right .text {
 	font-size:25px;
 	font-weight: 600;
-	/* letter-spacing: 0.2rem; */
 	margin-bottom: 10px;
 }
 #about .about-content .col-right .text span{
@@ -390,6 +419,10 @@ section{
     color: black;
 }
 
+#portfolios .portfolio-info a:hover {
+	text-decoration: underline;
+}
+
 #portfolios .portfolio-info h1 {
 	font-size: 3rem;
 	font-weight: 400;
@@ -397,17 +430,10 @@ section{
     font-family: 'day_n_nite';
     color: #E60965;
 }
-/* #portfolios .portfolio-info h2 {
-    font-size: 10rem;
-    font-weight: 500;
-    margin-top: 10px;
-} */
+
 #portfolios .portfolio-info p {
 	color: #28231D;
     font-size: 20px;
-    /* letter-spacing: 1px;
-    line-height: 20px;
-    padding: 10px 15px; */
     text-align: justify;
     position: relative;
 }
@@ -448,6 +474,14 @@ section{
 
 /* contact section */
 
+
+#contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    
+}
 #contact .title{
     position: relative;
     font-family: 'day_n_nite';
@@ -467,6 +501,155 @@ section{
     height: 3px;
     background:#E60965;
     transform: translateX(-50%);
+}
+
+#contact .title::after{
+    content: "get in touch";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    padding: 5px;
+    background: #fff;
+    font-size: 20px;
+    transform: translateX(-50%);
+    color: #E60965;
+}
+
+#contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+
+
+#contact .contact-content .text{
+    margin-bottom: 10px;
+    font-size:25px;
+	font-weight: 600;
+    color: #E60965;
+}
+
+
+#contact .contact-content .left p{
+    text-align: justify;
+
+}
+
+#contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+
+#contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+#contact .contact-content .row .info{
+    margin-left: 30px;
+}
+
+#contact .contact-content .info .head{
+    font-weight: 500;
+    font-size: 1.2rem;
+    
+    
+}
+#contact .contact-content .info .sub-title{
+    color: #28231D;
+    font-size: 1rem;
+}
+#contact .contact-content .info .sub-title a{
+    color: #28231D;
+    font-size: 1rem;
+}
+
+#contact .contact-content .info .sub-title a:hover{
+    color: #E60965;
+    font-size: 1rem;
+    text-decoration: underline;
+}
+#contact .contact-content .row i{
+    font-size: 25px;
+    color: #E60965;
+}
+
+#contact .right form .fields{
+    display: flex;
+
+}
+
+#contact .right form .field, #contact .right form .fields .field{
+   height: 45px;
+   width: 100%;
+   margin-bottom: 15px;
+}
+#contact .right form .name{
+    margin-right: 10px;
+}
+#contact .right form .email{
+    margin-left: 10px;
+}
+
+#contact .right form .textarea{
+    height: 150px;
+}
+
+#contact .right form .field input, 
+#contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+}
+
+#contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+
+#contact .right form .button{
+    height: 47px;
+    width: 50%;
+}
+#contact .right form .button button{
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+	color: white;
+	background-color:  #E60965;
+    border-radius: 6px;
+	border: 2px solid #E60965;
+	transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+
+#contact .right form button:hover {
+	color: #E60965;
+	background-color: transparent;
+}
+
+/* footer section */
+
+footer{
+    background: #FFC0D3;
+    padding: 20px 23px;
+    text-align: center;
+}
+
+footer span{
+    color: #28231D;
+    text-decoration: none;
+}
+
+footer span a:hover{
+    text-decoration: underline;
+}
+
+footer span a{
+    color: #E60965;
 }
 
 
@@ -558,11 +741,6 @@ section{
         
     }
 
-    #about .about-content .col-right p{
-        font-size: 1.5rem;
-        
-
-    }
 
     #portfolios .portfolio-info h1 {
         font-size: 2rem;
@@ -570,7 +748,21 @@ section{
         padding: 10px 10px;
         font-family: 'day_n_nite';
         color: #E60965;
-        margin-top: 25%;
+        
+    }
+    #portfolios .portfolio-info p {
+        font-size: 1rem;
+        margin: 0;
+        letter-spacing: 0;
+        line-height: 2rem;
+        
+       
+        
+    }
+
+    #contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
     }
 }
 
@@ -588,48 +780,7 @@ section{
         
     }
 
-    /* .home .homeContent a{
-        font-size: 20px;
-    } */
-
-    
-
-    /* #about .about-content .col-left {
-        width: 250px;
-        height: 360px;
-    }
-    #about .about-content .col-right {
-        width: 100%;
-    }
-
- 
-    #about .col-right .section-title{
-        font-size: 40px;
-        font-weight: 500;
-        letter-spacing: 0.2rem;
-        margin-bottom: 10px;
-    }
-    #about .col-right p{
-
-        font-size: 1rem;
-    }
-
-    #about .col-right h2{
-        margin-bottom: 20px;
-        font-size: 30px;
-    }
-    #about .col-right .cta {
-        color: white;
-        margin-bottom: 40px;
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
-
-    #about .col-left .about-img {
-        width: 250px;
-        left: -40px;
-    } */
-
+  
     #about .title{
         font-size: 40px;
         font-weight: 500;
@@ -638,11 +789,6 @@ section{
 
     #about .about-content .col-right .text {
         font-size: 1.2rem;
-    }
-
-    #about .about-content .col-right p{
-        font-size: 1.5rem;
-        
     }
 
     #portfolios .portfolio-info h1 {
@@ -750,6 +896,7 @@ section{
     }
     #about .col-right {
         width: 100%;
+        font-size: 10px;
     }
 
 
