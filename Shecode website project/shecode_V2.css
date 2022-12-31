@@ -162,6 +162,8 @@ section{
     font-size: 35px;
     font-weight: 600;
     font-family: 'day_n_nite';
+    color: #E60965;
+
 }
 
 .navbar .menu li{
@@ -557,12 +559,21 @@ section{
 
 /* contact section */
 
+#contact{
+    display: flex;
+    background: url("https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
 
 #contact .contact-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+   
     
 }
 #contact .title{
@@ -587,12 +598,12 @@ section{
 }
 
 #contact .title::after{
-    content: "get in touch";
+    content: "let us grab a cup";
     position: absolute;
     bottom: -12px;
     left: 50%;
     padding: 5px;
-    background: #fff;
+    background: #eedcc8;
     font-size: 20px;
     transform: translateX(-50%);
     color: #E60965;
