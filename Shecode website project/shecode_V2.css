@@ -459,7 +459,17 @@ section{
     background:#E60965;
     transform: translateX(-50%);
 }
-
+#portfolios .title::after{
+    content: "what I did so far";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    padding: 5px;
+    background: #FDF6F0;
+    font-size: 20px;
+    transform: translateX(-50%);
+    color: #E60965;
+}
 #portfolios .portfolio-item {
     flex-direction: row;
     display: flex;
