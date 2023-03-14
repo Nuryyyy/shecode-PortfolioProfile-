@@ -28,6 +28,12 @@ html {
     scroll-behavior: smooth;
 }
 
+/* link style */
+.link {
+    text-decoration: none;
+    color: #E60965;
+}
+
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
@@ -516,6 +522,7 @@ section{
 
 #portfolios .portfolio-info a:hover {
 	text-decoration: underline;
+    text-decoration-color: #E60965;
 }
 
 #portfolios .portfolio-info h1 {

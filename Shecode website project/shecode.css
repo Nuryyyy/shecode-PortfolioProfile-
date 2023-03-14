@@ -33,6 +33,12 @@ img{
 	object-fit: cover;
 }
 
+/* link style */
+.link {
+    text-decoration: none;
+    color: red;
+}
+
 /* button */
 .btn{
     font-size: 18px;
